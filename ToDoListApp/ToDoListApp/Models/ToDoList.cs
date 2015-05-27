@@ -13,9 +13,13 @@ namespace ToDoListApp.Models
             SeedList();
         }
 
-
+        #region Properties
         public List<ListItem> Items { get; set; }
 
+        #endregion
+
+
+        #region Methods 
         public void AddListItem(string description)
         {
             Items.Add(ListItem.Create(description));
@@ -28,7 +32,7 @@ namespace ToDoListApp.Models
             if (item == null) return "Item not found";
 
             item.MarkAsCompleted();
-            return String.Format("{0} is now marked as complete" , item.Description);
+            return String.Format("{0} is now marked as complete", item.Description);
         }
 
         public string Delete(Guid id)
@@ -49,5 +53,11 @@ namespace ToDoListApp.Models
             this.AddListItem("Joost is gay");
             this.AddListItem("Diederik is Cool");
         }
+        #endregion
+
+
+
+
+
     }
 }
