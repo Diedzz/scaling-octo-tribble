@@ -49,9 +49,9 @@ namespace ToDoListApp.Models
         private void SeedList()
         {
             if (this.Items.Any()) return;
-            this.AddListItem("Chris is gay");
-            this.AddListItem("Joost is gay");
-            this.AddListItem("Diederik is Cool");
+            this.AddListItem("Boodschappen doen");
+            this.AddListItem("Melk kopen");
+            this.AddListItem("Biefstuk kopen");
         }
         #endregion
 
